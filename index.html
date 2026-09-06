@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>Beneath Everything | The Story of Joseph Bennett</title>
+  <title>
+    Beneath Everything | The Story of Joseph Bennett
+  </title>
 
   <meta
     name="description"
@@ -33,9 +37,12 @@
   <link
     rel="stylesheet"
     href="css/landing.css">
+
 </head>
 
+
 <body>
+
 
   <!-- ======================================================
        SITE HEADER
@@ -46,7 +53,7 @@
     <div class="nav-container">
 
       <a
-        href="#top"
+        href="index.html"
         class="site-brand"
         aria-label="Beneath Everything Home">
 
@@ -60,8 +67,10 @@
 
       </a>
 
+
       <button
         class="menu-toggle"
+        type="button"
         aria-label="Open navigation"
         aria-expanded="false">
 
@@ -70,6 +79,7 @@
         <span></span>
 
       </button>
+
 
       <nav
         class="site-navigation"
@@ -84,10 +94,14 @@
         </a>
 
         <a href="#journey">
-          The Journey
+          Chapters
         </a>
 
-        <a href="#author">
+        <a href="contents.html">
+          Table of Contents
+        </a>
+
+        <a href="author.html">
           Author
         </a>
 
@@ -98,60 +112,53 @@
   </header>
 
 
-  <!-- ======================================================
-       HERO
-  ======================================================= -->
-
   <main id="top">
 
-    <section class="hero">
+
+    <!-- ======================================================
+         HERO BANNER
+         IMAGE ONLY
+         NO TEXT OVER THE BANNER
+    ======================================================= -->
+
+    <section
+      class="hero"
+      aria-label="Beneath Everything visual introduction">
 
       <div class="hero-overlay"></div>
 
-      <div class="hero-content">
+    </section>
 
-        <p class="hero-eyebrow">
+
+    <!-- ======================================================
+         BOOK INTRODUCTION
+    ======================================================= -->
+
+    <section class="section section-book-introduction">
+
+      <div class="content-container narrow center">
+
+        <p class="section-eyebrow">
           A Narrative Story by Bradley Hobbs
         </p>
 
-        <h1>
-          BENEATH
-          <span>EVERYTHING</span>
+        <h1 class="book-title">
+          BENEATH EVERYTHING
         </h1>
 
-        <p class="hero-subtitle">
+        <p class="book-subtitle">
           The Story of Joseph Bennett
         </p>
 
-        <div class="hero-divider"></div>
+        <div class="book-divider"></div>
 
-        <p class="hero-message">
+        <p class="book-message">
           Bury Your Fear and Reveal Your Talent
         </p>
 
-        <p class="hero-description">
+        <p class="book-description">
           A story about the things we carry, the battles we were never meant to fight, the losses that change us, and the choices that remain when life does not unfold as we expected.
         </p>
-
-        <div class="hero-actions">
-
-          <a
-            href="#story"
-            class="button button-primary">
-
-            Begin the Story
-
-          </a>
-
-          <a
-            href="#journey"
-            class="button button-secondary">
-
-            Explore the Journey
-
-          </a>
-
-        </div>
 
       </div>
 
@@ -198,46 +205,46 @@
 
 
     <!-- ======================================================
-     JOSEPH
-======================================================= -->
+         JOSEPH
+    ======================================================= -->
 
-<section
-  id="joseph"
-  class="section section-joseph">
+    <section
+      id="joseph"
+      class="section section-joseph">
 
-  <div class="content-container narrow">
+      <div class="content-container narrow">
 
-    <div class="joseph-content">
+        <div class="joseph-content">
 
-      <p class="section-eyebrow">
-        Meet Joseph
-      </p>
+          <p class="section-eyebrow">
+            Meet Joseph
+          </p>
 
-      <h2>
-        The Person Before the Story
-      </h2>
+          <h2>
+            The Person Before the Story
+          </h2>
 
-      <p>
-        Joseph Bennett is not a hero who has everything figured out. He is a man learning how to live while carrying experiences that have changed him.
-      </p>
+          <p>
+            Joseph Bennett is not a hero who has everything figured out. He is a man learning how to live while carrying experiences that have changed him.
+          </p>
 
-      <p>
-        He cares deeply about other people, sometimes to the point of carrying concerns that were never his responsibility. He worries about consequences that may never happen and often finds it easier to offer grace to others than to give that same grace to himself.
-      </p>
+          <p>
+            He cares deeply about other people, sometimes to the point of carrying concerns that were never his responsibility. He worries about consequences that may never happen and often finds it easier to offer grace to others than to give that same grace to himself.
+          </p>
 
-      <p>
-        Joseph's journey is not about becoming a person untouched by his past. It is about learning that his past can influence him without possessing the authority to determine everything that comes next.
-      </p>
+          <p>
+            Joseph's journey is not about becoming a person untouched by his past. It is about learning that his past can influence him without possessing the authority to determine everything that comes next.
+          </p>
 
-      <blockquote>
-        What happens when a person finally gives themselves the grace they have always given everyone else?
-      </blockquote>
+          <blockquote>
+            What happens when a person finally gives themselves the grace they have always given everyone else?
+          </blockquote>
 
-    </div>
+        </div>
 
-  </div>
+      </div>
 
-</section>
+    </section>
 
 
     <!-- ======================================================
@@ -296,9 +303,15 @@
 
         </div>
 
+
         <div class="journey-grid">
 
-          <article class="journey-card">
+
+          <!-- CHAPTER ONE -->
+
+          <a
+            href="chapter-1.html"
+            class="journey-card journey-link">
 
             <span class="journey-number">
               01
@@ -312,9 +325,18 @@
               The life Joseph carried before he fully understood how deeply his experiences had affected the way he saw himself and the world around him.
             </p>
 
-          </article>
+            <span class="journey-action">
+              Begin Reading
+            </span>
 
-          <article class="journey-card">
+          </a>
+
+
+          <!-- CHAPTER TWO -->
+
+          <a
+            href="chapter-2.html"
+            class="journey-card journey-link">
 
             <span class="journey-number">
               02
@@ -328,9 +350,18 @@
               Joseph begins learning that caring deeply about others does not require him to accept responsibility for every problem around him.
             </p>
 
-          </article>
+            <span class="journey-action">
+              Continue Reading
+            </span>
 
-          <article class="journey-card">
+          </a>
+
+
+          <!-- CHAPTER THREE -->
+
+          <a
+            href="chapter-3.html"
+            class="journey-card journey-link">
 
             <span class="journey-number">
               03
@@ -344,9 +375,18 @@
               Divorce and loss bring Joseph face to face with the difficult realization that some circumstances cannot be controlled simply by worrying about them.
             </p>
 
-          </article>
+            <span class="journey-action">
+              Continue Reading
+            </span>
 
-          <article class="journey-card">
+          </a>
+
+
+          <!-- CHAPTER FOUR -->
+
+          <a
+            href="chapter-4.html"
+            class="journey-card journey-link">
 
             <span class="journey-number">
               04
@@ -360,9 +400,18 @@
               An unexpected relationship challenges Joseph's assumptions about fear, relationships, and the future he believed had already been decided.
             </p>
 
-          </article>
+            <span class="journey-action">
+              Continue Reading
+            </span>
 
-          <article class="journey-card journey-card-featured">
+          </a>
+
+
+          <!-- CHAPTER FIVE -->
+
+          <a
+            href="chapter-5.html"
+            class="journey-card journey-link journey-card-featured">
 
             <span class="journey-number">
               05
@@ -376,7 +425,12 @@
               Joseph begins to understand that his history can influence his life without possessing the authority to determine every possibility that remains ahead of him.
             </p>
 
-          </article>
+            <span class="journey-action">
+              Read Chapter Five
+            </span>
+
+          </a>
+
 
         </div>
 
@@ -423,7 +477,7 @@
 
 
     <!-- ======================================================
-         AUTHOR
+         AUTHOR INTRODUCTION
     ======================================================= -->
 
     <section
@@ -454,9 +508,20 @@
             Beneath Everything invites readers to consider that difficult experiences can become part of a person's story without becoming the only explanation for who they are or who they may still become.
           </p>
 
+          <a
+            href="author.html"
+            class="text-link">
+
+            Meet the Author
+
+          </a>
+
         </div>
 
-        <div class="author-mark">
+
+        <div
+          class="author-mark"
+          aria-label="Bradley Hobbs">
 
           <span>
             BH
@@ -470,7 +535,7 @@
 
 
     <!-- ======================================================
-         FINAL CTA
+         FINAL SECTION
     ======================================================= -->
 
     <section class="final-section">
@@ -511,6 +576,7 @@
 
     </section>
 
+
   </main>
 
 
@@ -534,7 +600,16 @@
 
       </div>
 
+
       <div class="footer-links">
+
+        <a href="contents.html">
+          Table of Contents
+        </a>
+
+        <a href="author.html">
+          Author
+        </a>
 
         <a href="copyright.md">
           Copyright
@@ -550,6 +625,7 @@
 
       </div>
 
+
       <p class="footer-copyright">
         © 2026 Bradley Hobbs. All Rights Reserved.
       </p>
@@ -564,6 +640,7 @@
   ======================================================= -->
 
   <script src="js/landing.js"></script>
+
 
 </body>
 </html>
