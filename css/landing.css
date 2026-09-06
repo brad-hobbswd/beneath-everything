@@ -278,167 +278,32 @@ button {
 
 
 /* =========================================================
-   HERO
+   FEATURED BANNER
 ========================================================= */
 
-.hero {
-  position: relative;
+.banner-section {
+  padding: 130px 0 60px;
+}
 
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding:
-    160px 24px 110px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #08111d 0%,
-      #101b2b 48%,
-      #3b3025 100%
-    );
+.book-banner {
+  width: 100%;
 
   overflow: hidden;
+
+  border:
+    1px solid rgba(16, 27, 43, 0.08);
+
+  box-shadow:
+    var(--shadow-large);
 }
 
-.hero::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 70% 35%,
-      rgba(200, 164, 93, 0.18),
-      transparent 40%
-    );
-}
-
-.hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.45)
-    );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-
-  width: min(900px, 100%);
-
-  text-align: center;
-
-  color: var(--white);
-}
-
-
-/* =========================================================
-   HERO TEXT
-========================================================= */
-
-.hero-eyebrow,
-.section-eyebrow {
-  margin-bottom: 18px;
-
-  color: var(--gold-light);
-
-  font-size: 0.78rem;
-
-  font-weight: 700;
-
-  letter-spacing:
-    0.18em;
-
-  text-transform:
-    uppercase;
-}
-
-.hero h1 {
-  font-family:
-    "Cinzel",
-    serif;
-
-  font-size:
-    clamp(3.5rem, 10vw, 8rem);
-
-  font-weight: 600;
-
-  line-height: 0.9;
-
-  letter-spacing:
-    0.05em;
-}
-
-.hero h1 span {
+.book-banner img {
   display: block;
 
-  margin-top: 12px;
+  width: 100%;
 
-  color: var(--gold-light);
+  height: auto;
 }
-
-.hero-subtitle {
-  margin-top: 26px;
-
-  color: var(--ivory);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(1.6rem, 3vw, 2.4rem);
-
-  font-style: italic;
-}
-
-.hero-divider {
-  width: 80px;
-  height: 1px;
-
-  margin:
-    32px auto;
-
-  background:
-    var(--gold);
-}
-
-.hero-message {
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(1.6rem, 3vw, 2.3rem);
-
-  font-weight: 600;
-}
-
-.hero-description {
-  width: min(680px, 100%);
-
-  margin:
-    24px auto 0;
-
-  color:
-    rgba(255, 255, 255, 0.78);
-
-  font-size:
-    1rem;
-}
-
 
 /* =========================================================
    BUTTONS
