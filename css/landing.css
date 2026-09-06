@@ -282,7 +282,7 @@ button {
 ========================================================= */
 
 .banner-section {
-  padding: 130px 0 60px;
+  padding: 100px 0 30px;
 }
 
 .book-banner {
@@ -429,6 +429,7 @@ button {
 .section-story {
   background:
     var(--ivory-soft);
+   padding-top: 70px;
 }
 
 .story-highlight {
