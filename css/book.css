@@ -1,0 +1,991 @@
+/* =========================================================
+   BENEATH EVERYTHING
+   BOOK PAGE STYLESHEET
+
+   Author: Bradley Hobbs
+   Version: 1.0
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --ivory: #f7f0e6;
+
+  --paper: #fffdf8;
+
+  --gold: #c8a45d;
+
+  --gold-light: #d8bc7d;
+
+  --navy: #101b2b;
+
+  --navy-dark: #08111d;
+
+  --charcoal: #222222;
+
+  --muted: #6f6a63;
+
+  --white: #ffffff;
+
+  --border: rgba(16, 27, 43, 0.12);
+
+  --shadow:
+    0 20px 50px
+    rgba(16, 27, 43, 0.08);
+
+  --content-width: 1120px;
+
+  --reading-width: 760px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: var(--ivory);
+
+  color: var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  line-height: 1.8;
+}
+
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+
+  color: var(--navy);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+
+p {
+  margin:
+    0 0 1.5rem;
+}
+
+
+/* =========================================================
+   CONTAINERS
+========================================================= */
+
+.content-container {
+  width:
+    min(
+      var(--content-width),
+      calc(100% - 48px)
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.content-container.narrow {
+  width:
+    min(
+      var(--reading-width),
+      calc(100% - 48px)
+    );
+}
+
+
+.center {
+  text-align: center;
+}
+
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
+.site-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(247, 240, 230, 0.96);
+
+  border-bottom:
+    1px solid var(--border);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+.nav-container {
+  width:
+    min(
+      var(--content-width),
+      calc(100% - 48px)
+    );
+
+  min-height: 82px;
+
+  margin:
+    0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  flex-shrink: 0;
+}
+
+
+.brand-main {
+  color: var(--navy);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.brand-subtitle {
+  color: var(--muted);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 0.95rem;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.site-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+.site-navigation a {
+  position: relative;
+
+  color: var(--navy);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.site-navigation a:hover,
+.site-navigation a[aria-current="page"] {
+  color: var(--gold);
+}
+
+
+.site-navigation a[aria-current="page"]::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: -8px;
+  left: 0;
+
+  height: 1px;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.menu-toggle span {
+  display: block;
+
+  width: 25px;
+  height: 2px;
+
+  margin: 5px auto;
+
+  background: var(--navy);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   BOOK PAGE HERO
+========================================================= */
+
+.book-page-hero {
+  padding:
+    110px 0 75px;
+
+  text-align: center;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+.section-eyebrow {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.book-page-hero h1 {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(3rem, 7vw, 5.5rem);
+
+  letter-spacing: 0.04em;
+}
+
+
+.page-subtitle {
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.4rem, 3vw, 2rem);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CONTENTS
+========================================================= */
+
+.contents-section {
+  padding:
+    90px 0 120px;
+}
+
+
+.contents-list {
+  background: var(--paper);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+}
+
+
+.contents-item {
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    28px 36px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  transition:
+    background 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+
+.contents-item:last-child {
+  border-bottom: 0;
+}
+
+
+.contents-item:hover {
+  padding-left: 46px;
+
+  background:
+    rgba(200, 164, 93, 0.06);
+}
+
+
+.contents-label {
+  margin-bottom: 6px;
+
+  color: var(--gold);
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.contents-title {
+  color: var(--navy);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.5rem, 3vw, 2rem);
+
+  font-style: italic;
+}
+
+
+.contents-item-simple,
+.contents-item-author {
+  color: var(--navy);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.35rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   READING PAGE
+========================================================= */
+
+.reading-section {
+  padding:
+    100px 0 120px;
+}
+
+
+.reading-header {
+  margin-bottom: 70px;
+
+  text-align: center;
+}
+
+
+.reading-header .chapter-label {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.reading-header h1 {
+  margin-bottom: 20px;
+
+  font-size:
+    clamp(2.6rem, 6vw, 4.5rem);
+}
+
+
+.reading-header .chapter-subtitle {
+  color: var(--muted);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.5rem, 3vw, 2rem);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   READING CONTENT
+========================================================= */
+
+.reading-content {
+  color:
+    rgba(34, 34, 34, 0.88);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.25rem, 2vw, 1.45rem);
+
+  line-height: 1.95;
+}
+
+
+.reading-content p {
+  margin-bottom: 1.8rem;
+}
+
+
+.reading-content p:first-child::first-letter {
+  float: left;
+
+  margin:
+    8px 12px 0 0;
+
+  color: var(--gold);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size: 4.5rem;
+
+  font-weight: 600;
+
+  line-height: 0.8;
+}
+
+
+/* =========================================================
+   READING SUBHEADINGS
+========================================================= */
+
+.reading-content h2 {
+  margin:
+    70px 0 25px;
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.6rem);
+}
+
+
+.reading-content h3 {
+  margin:
+    50px 0 20px;
+
+  font-size:
+    clamp(1.4rem, 3vw, 2rem);
+}
+
+
+/* =========================================================
+   QUOTES
+========================================================= */
+
+.reading-content blockquote {
+  margin:
+    55px 0;
+
+  padding:
+    30px 35px;
+
+  border-left:
+    3px solid var(--gold);
+
+  color: var(--navy);
+
+  background:
+    rgba(200, 164, 93, 0.06);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.6rem, 3vw, 2.1rem);
+
+  font-style: italic;
+
+  line-height: 1.45;
+}
+
+
+.reading-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   READING DIVIDER
+========================================================= */
+
+.reading-divider {
+  width: 80px;
+  height: 1px;
+
+  margin:
+    65px auto;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   CHAPTER NAVIGATION
+========================================================= */
+
+.chapter-navigation {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 100px;
+
+  padding-top: 40px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+
+.chapter-navigation a {
+  max-width: 45%;
+
+  color: var(--navy);
+}
+
+
+.chapter-navigation a:last-child {
+  margin-left: auto;
+
+  text-align: right;
+}
+
+
+.chapter-navigation span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.chapter-navigation strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 1.35rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   AUTHOR PAGE
+========================================================= */
+
+.author-section {
+  padding:
+    100px 0 120px;
+}
+
+
+.author-content {
+  color:
+    rgba(34, 34, 34, 0.88);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.25rem, 2vw, 1.45rem);
+
+  line-height: 1.95;
+}
+
+
+.author-content h2 {
+  margin:
+    60px 0 25px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  padding:
+    70px 0;
+
+  background:
+    var(--navy-dark);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+.footer-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 28px;
+}
+
+
+.footer-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.footer-brand strong {
+  color: var(--white);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size: 1rem;
+
+  letter-spacing: 0.14em;
+}
+
+
+.footer-brand span {
+  color: var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 1.1rem;
+
+  font-style: italic;
+}
+
+
+.footer-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap:
+    12px 24px;
+}
+
+
+.footer-links a {
+  font-size: 0.76rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+
+.footer-copyright {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .content-container,
+  .content-container.narrow {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .nav-container {
+    width:
+      calc(100% - 32px);
+
+    min-height: 72px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  .site-navigation {
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 15px 16px 25px;
+
+    background:
+      var(--ivory);
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+
+  .site-navigation.is-open {
+    display: flex;
+  }
+
+
+  .site-navigation a {
+    padding:
+      15px 0;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+
+  .site-navigation a:last-child {
+    border-bottom: 0;
+  }
+
+
+  .site-navigation a[aria-current="page"]::after {
+    display: none;
+  }
+
+
+  .book-page-hero {
+    padding:
+      80px 0 60px;
+  }
+
+
+  .contents-section {
+    padding:
+      60px 0 80px;
+  }
+
+
+  .contents-item {
+    padding:
+      24px 22px;
+  }
+
+
+  .contents-item:hover {
+    padding-left: 22px;
+  }
+
+
+  .reading-section {
+    padding:
+      70px 0 90px;
+  }
+
+
+  .reading-header {
+    margin-bottom: 50px;
+  }
+
+
+  .reading-content {
+    font-size:
+      1.22rem;
+  }
+
+
+  .reading-content blockquote {
+    margin:
+      40px 0;
+
+    padding:
+      25px;
+  }
+
+
+  .chapter-navigation {
+    flex-direction: column;
+
+    margin-top: 70px;
+  }
+
+
+  .chapter-navigation a,
+  .chapter-navigation a:last-child {
+    max-width: 100%;
+
+    margin-left: 0;
+
+    text-align: left;
+  }
+
+
+  .site-footer {
+    padding:
+      55px 0;
+  }
+
+}
