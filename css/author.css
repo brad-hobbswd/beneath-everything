@@ -1,0 +1,1017 @@
+/* =========================================================
+   BENEATH EVERYTHING
+   AUTHOR PAGE STYLESHEET
+
+   About the Author
+   Bradley Hobbs
+
+   Author: Bradley Hobbs
+   Version: 1.0
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --ivory: #f7f0e6;
+  --paper: #fffdf8;
+
+  --gold: #c8a45d;
+  --gold-light: #d8bc7d;
+
+  --navy: #101b2b;
+  --navy-dark: #08111d;
+
+  --charcoal: #222222;
+  --muted: #6f6a63;
+
+  --white: #ffffff;
+
+  --border:
+    rgba(16, 27, 43, 0.12);
+
+  --content-width: 760px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background:
+    var(--ivory);
+
+  color:
+    var(--charcoal);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  line-height: 1.8;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
+.site-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background:
+    rgba(247, 240, 230, 0.96);
+
+  border-bottom:
+    1px solid var(--border);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+.nav-container {
+  width:
+    min(1120px, calc(100% - 48px));
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+.site-brand {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.brand-main {
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size:
+    1rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.brand-subtitle {
+  color:
+    var(--muted);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    0.95rem;
+
+  font-style:
+    italic;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.site-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+.site-navigation a {
+  color:
+    var(--navy);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.site-navigation a:hover,
+.site-navigation a[aria-current="page"] {
+  color:
+    var(--gold);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  padding: 5px;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  cursor: pointer;
+}
+
+
+.menu-toggle span {
+  display: block;
+
+  width: 25px;
+
+  height: 2px;
+
+  margin: 5px;
+
+  background:
+    var(--navy);
+}
+
+
+/* =========================================================
+   AUTHOR HERO
+========================================================= */
+
+.author-hero {
+  position: relative;
+
+  padding:
+    135px 24px 115px;
+
+  overflow: hidden;
+
+  text-align:
+    center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-dark) 0%,
+      var(--navy) 55%,
+      #253447 100%
+    );
+
+  color:
+    var(--white);
+}
+
+
+.author-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(200, 164, 93, 0.18),
+      transparent 50%
+    );
+}
+
+
+.author-hero-content {
+  position: relative;
+
+  z-index: 1;
+
+  width:
+    min(900px, 100%);
+
+  margin: 0 auto;
+}
+
+
+.author-label {
+  margin:
+    0 0 22px;
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.2em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.author-hero h1 {
+  margin: 0;
+
+  color:
+    var(--white);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size:
+    clamp(3rem, 8vw, 6rem);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.1;
+
+  letter-spacing:
+    0.03em;
+}
+
+
+.author-divider {
+  width: 80px;
+
+  height: 1px;
+
+  margin:
+    35px auto;
+
+  background:
+    var(--gold);
+}
+
+
+.author-introduction {
+  width:
+    min(760px, 100%);
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.5rem, 3vw, 2.2rem);
+
+  font-style:
+    italic;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   AUTHOR SECTION
+========================================================= */
+
+.author-section {
+  padding:
+    100px 24px 120px;
+}
+
+
+.author-content {
+  width:
+    min(var(--content-width), 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.author-heading {
+  margin-bottom:
+    55px;
+
+  text-align:
+    center;
+}
+
+
+.section-label {
+  margin:
+    0 0 15px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    0.76rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.18em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.author-heading h2,
+.book-connection h2,
+.author-closing h2 {
+  margin: 0;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3.4rem);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.25;
+}
+
+
+/* =========================================================
+   AUTHOR COPY
+========================================================= */
+
+.author-copy {
+  color:
+    rgba(34, 34, 34, 0.9);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.3rem, 2vw, 1.55rem);
+
+  line-height:
+    1.95;
+}
+
+
+.author-copy p {
+  margin:
+    0 0 1.9rem;
+}
+
+
+/* =========================================================
+   AUTHOR REFLECTION
+========================================================= */
+
+.author-reflection {
+  margin:
+    70px 0;
+
+  padding:
+    45px 30px;
+
+  text-align:
+    center;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+
+.author-reflection p {
+  margin: 0;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.9rem, 4vw, 2.8rem);
+
+  font-style:
+    italic;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================================================
+   BOOK CONNECTION
+========================================================= */
+
+.book-connection {
+  margin:
+    100px 0;
+
+  padding:
+    80px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+
+  color:
+    rgba(34, 34, 34, 0.9);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.3rem, 2vw, 1.55rem);
+
+  line-height:
+    1.95;
+}
+
+
+.book-connection h2 {
+  margin-bottom:
+    40px;
+}
+
+
+.book-connection p {
+  margin:
+    0 0 1.9rem;
+}
+
+
+/* =========================================================
+   BOOK QUOTE
+========================================================= */
+
+.book-connection blockquote {
+  margin:
+    60px 0;
+
+  padding:
+    45px 35px;
+
+  border-top:
+    1px solid var(--gold);
+
+  border-bottom:
+    1px solid var(--gold);
+
+  color:
+    var(--navy);
+
+  text-align:
+    center;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  font-style:
+    italic;
+
+  line-height:
+    1.35;
+}
+
+
+.book-connection blockquote p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   AUTHOR CLOSING
+========================================================= */
+
+.author-closing {
+  padding-top:
+    20px;
+
+  color:
+    rgba(34, 34, 34, 0.9);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(1.3rem, 2vw, 1.55rem);
+
+  line-height:
+    1.95;
+}
+
+
+.author-closing h2 {
+  margin-bottom:
+    40px;
+}
+
+
+.author-closing p {
+  margin:
+    0 0 1.9rem;
+}
+
+
+.closing-statement {
+  margin-top:
+    65px !important;
+
+  color:
+    var(--navy);
+
+  text-align:
+    center;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  font-style:
+    italic;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================================================
+   AUTHOR NAVIGATION
+========================================================= */
+
+.author-navigation {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 30px;
+
+  margin-top:
+    110px;
+
+  padding-top:
+    40px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+
+.navigation-link {
+  max-width:
+    45%;
+}
+
+
+.navigation-link.next {
+  margin-left:
+    auto;
+
+  text-align:
+    right;
+}
+
+
+.navigation-link span {
+  display: block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.15em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.navigation-link strong {
+  color:
+    var(--navy);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.5rem;
+
+  font-weight:
+    600;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.navigation-link:hover strong {
+  color:
+    var(--gold);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  padding:
+    70px 24px;
+
+  background:
+    var(--navy-dark);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+.footer-content {
+  width:
+    min(1120px, 100%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap: 25px;
+
+  text-align:
+    center;
+}
+
+
+.footer-brand {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  gap: 5px;
+}
+
+
+.footer-brand strong {
+  color:
+    var(--white);
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.footer-brand span {
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.1rem;
+
+  font-style:
+    italic;
+}
+
+
+.footer-links {
+  display: flex;
+
+  flex-wrap:
+    wrap;
+
+  justify-content:
+    center;
+
+  gap:
+    12px 24px;
+}
+
+
+.footer-links a {
+  font-size:
+    0.76rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.footer-links a:hover,
+.footer-links a[aria-current="page"] {
+  color:
+    var(--gold);
+}
+
+
+.footer-copyright {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size:
+    0.8rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .nav-container {
+    width:
+      calc(100% - 32px);
+
+    min-height:
+      72px;
+  }
+
+
+  .menu-toggle {
+    display:
+      block;
+  }
+
+
+  .site-navigation {
+    position:
+      absolute;
+
+    top:
+      72px;
+
+    right: 0;
+
+    left: 0;
+
+    display:
+      none;
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+
+    gap: 0;
+
+    padding:
+      15px 16px 25px;
+
+    background:
+      var(--ivory);
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+
+  .site-navigation.is-open {
+    display:
+      flex;
+  }
+
+
+  .site-navigation a {
+    padding:
+      15px 0;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+
+  .author-hero {
+    padding:
+      100px 24px 85px;
+  }
+
+
+  .author-section {
+    padding:
+      70px 24px 90px;
+  }
+
+
+  .author-copy,
+  .book-connection,
+  .author-closing {
+    font-size:
+      1.25rem;
+  }
+
+
+  .author-reflection {
+    margin:
+      55px 0;
+
+    padding:
+      35px 20px;
+  }
+
+
+  .book-connection {
+    margin:
+      75px 0;
+
+    padding:
+      65px 0;
+  }
+
+
+  .book-connection blockquote {
+    margin:
+      50px 0;
+
+    padding:
+      35px 20px;
+  }
+
+
+  .author-navigation {
+    flex-direction:
+      column;
+
+    gap:
+      30px;
+  }
+
+
+  .navigation-link,
+  .navigation-link.next {
+    max-width:
+      100%;
+
+    margin-left:
+      0;
+
+    text-align:
+      left;
+  }
+
+}
